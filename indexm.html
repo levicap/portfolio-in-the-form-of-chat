@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e7d04988ff.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="phone">
+        <div class="texting">
+            <div class="top">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+            <div class="head">
+                <i class="fa-solid fa-angle-left" ></i>
+                <img src="/images/ahmeddd.jpg" alt="" class="use">
+                <div class="username">
+                    <span class="samo">Ahmed benyahia</span><br>
+                    <span class="ava">Avalibale to Work</span>
+                </div>
+                <div class="points">
+                    <span class="pt">.</span>
+                    <span class="pt" >.</span>
+                    <span class="pt">.</span>
+                </div>
+            </div>
+            <div class="msg2" id="div1"></div>
+            <div class="msg1" id="div2"></div>
+            <div class="msg2" id="div3"> </div>
+            <div class="msg1" id="div4"></div>
+            <div class="msg2" id="div5"> </div>
+            <div class="msg1" id="div6"></div>
+            <div class="msg2" id="div7"> </div>
+            <div class="msg3" id="div8"></div>
+            <div class="send">
+                <span class="typ">type a message...</span>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-right" id="sbm"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="change-text" class="btn">click to know me</button>
+
+    <script>
+        // Define an array of objects, each containing the ID and new text content for a specific div
+    const newText = [
+        { id: 'div1', text: 'what s you name' },
+        { id: 'div2', text: 'i m ahmedbenyahia'},
+        { id: 'div3', text: 'how old are you' },
+        { id: 'div4', text: '20yo' },
+        { id: 'div5', text: 'show me of your work' },
+        { id: 'div6', text: 'https://github.com/levicap/' },
+        { id: 'div7', text: 'give me facebook account' },
+        { id: 'div8', text: 'www.facebook.com/ahmbe148/' }
+
+        ];
+
+// Define the delay between the divs
+    const delay = 700;
+
+// Select the button element and add a click event listener
+    const button = document.getElementById('change-text');
+    button.addEventListener('click', () => {
+  // Loop through each object in the newText array and update the corresponding div with a delay
+    newText.forEach((item, index) => {
+        const div = document.getElementById(item.id);
+    setTimeout(() => {
+      div.textContent = item.text;
+    }, index * delay);
+  });
+});
+
+            
+</script>
+
+
+</body>
+</html>
